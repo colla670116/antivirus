@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>System Diagnostic</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="scanning-phase">
+            <div class="header-neutral">🛡️ System Diagnostic Center</div>
+            <div class="scanner-wrapper">
+                <div class="radar-circle"></div>
+                <div id="percentage">0%</div>
+            </div>
+            <h3 id="scan-text" class="blink-text">Scanning System Files...</h3>
+            <p class="sub-text">Please do not close this window.</p>
+        </div>
+
+        <div id="result-phase" style="display: none;">
+            <div class="header-danger">⚠️ SYSTEM ALERT</div>
+            <h2 class="danger-title">3 CRITICAL VULNERABILITIES FOUND!</h2>
+            
+            <ul class="threat-list">
+                <li><span class="icon">❌</span> IP Address Exposed</li>
+                <li><span class="icon">❌</span> Tracking Cookies Detected</li>
+                <li><span class="icon">❌</span> Bank Data Vulnerable</li>
+            </ul>
+
+            <div class="transition-box">
+                <p>To prevent data loss and secure your device, it is highly recommended to install a certified security suite.</p>
+                <div class="highlight-box">
+                    <p>🔥 <strong>Exclusive Alert:</strong> Claim your immediate $80 discount. Secure all your devices with TotalAV (2026 Editor's Choice) for <strong>only $19 today</strong>.</p>
+                </div>
+            </div>
+
+            <a href="YOUR_AFFILIATE_LINK_HERE" class="cta-button pulse">CLAIM $19 PROTECTION & FIX NOW</a>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
