@@ -1,34 +1,34 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { background-color: #121212; color: #ffffff; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { background-color: #121212; color: #ffffff; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; overflow: hidden; }
 .container { max-width: 480px; margin: 0 auto; padding: 20px; text-align: center; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; }
 
-/* Headers */
-.header-neutral { font-size: 1.2rem; color: #00e676; margin-bottom: 30px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
-.header-danger { background-color: #d32f2f; color: white; padding: 10px; font-weight: bold; font-size: 1.2rem; border-radius: 5px; margin-bottom: 20px; animation: flashBg 1s infinite alternate; }
+/* 头部样式 */
+.header-neutral { font-size: 1.1rem; color: #00e676; margin-bottom: 30px; font-weight: bold; letter-spacing: 1px; }
+.header-danger { background-color: #d32f2f; color: white; padding: 12px; font-weight: bold; font-size: 1.2rem; border-radius: 5px; margin-bottom: 20px; animation: flashBg 0.8s infinite alternate; }
 
-/* Radar Scanner */
-.scanner-wrapper { position: relative; width: 150px; height: 150px; margin: 0 auto 30px; }
-.radar-circle { width: 100%; height: 100%; border: 4px solid #333; border-radius: 50%; border-top-color: #00e676; animation: spin 1s linear infinite; }
-#percentage { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 2.5rem; font-weight: bold; color: #00e676; }
+/* 扫描雷达动画 */
+.scanner-wrapper { position: relative; width: 140px; height: 140px; margin: 0 auto 30px; }
+.radar-circle { width: 100%; height: 100%; border: 5px solid #333; border-radius: 50%; border-top-color: #00e676; animation: spin 0.6s linear infinite; }
+#percentage { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 2.2rem; font-weight: bold; color: #00e676; }
 
-/* Text & Lists */
-.blink-text { color: #00e676; font-size: 1.4rem; margin-bottom: 10px; animation: blink 1.5s infinite; }
+/* 文字与列表 */
+.blink-text { color: #00e676; font-size: 1.3rem; margin-bottom: 10px; }
 .sub-text { color: #888; font-size: 0.9rem; }
-.danger-title { color: #ff5252; font-size: 1.6rem; margin-bottom: 20px; line-height: 1.3; }
-.threat-list { list-style: none; text-align: left; background: #1e1e1e; padding: 15px; border-radius: 8px; border-left: 4px solid #ff5252; margin-bottom: 25px; }
-.threat-list li { margin-bottom: 12px; font-size: 1.1rem; color: #e0e0e0; font-weight: 500; }
-.threat-list li:last-child { margin-bottom: 0; }
-.threat-list .icon { margin-right: 10px; }
+.danger-title { color: #ff5252; font-size: 1.5rem; margin-bottom: 20px; line-height: 1.2; font-weight: 900; }
+.threat-list { list-style: none; text-align: left; background: #1e1e1e; padding: 15px; border-radius: 8px; border-left: 5px solid #ff5252; margin-bottom: 20px; }
+.threat-list li { margin-bottom: 10px; font-size: 1.05rem; color: #e0e0e0; font-weight: 600; }
+.threat-list .icon { margin-right: 8px; }
 
-/* Transition & CTA */
-.transition-box { background: #1a1a1a; padding: 15px; border-radius: 8px; margin-bottom: 25px; font-size: 1rem; line-height: 1.5; color: #bbb; border: 1px solid #333; }
-.highlight-box { margin-top: 15px; padding: 15px; background: rgba(0, 230, 118, 0.1); border: 1px solid #00e676; border-radius: 5px; color: #fff; }
-.highlight-box strong { color: #00e676; font-size: 1.1rem; }
-.cta-button { display: block; width: 100%; background: #00e676; color: #000; text-decoration: none; padding: 18px 10px; font-size: 1.2rem; font-weight: 900; border-radius: 5px; text-transform: uppercase; box-shadow: 0 4px 15px rgba(0,230,118,0.4); }
+/* 点击引导 */
+.full-screen-link { text-decoration: none; color: inherit; display: block; }
+.transition-box { background: rgba(255, 255, 255, 0.05); padding: 15px; border-radius: 8px; margin-bottom: 25px; border: 1px solid #333; }
+.highlight-box { padding: 12px; background: rgba(255, 82, 82, 0.1); border: 1px dashed #ff5252; border-radius: 5px; }
+.highlight-box p { font-size: 0.95rem; line-height: 1.4; color: #fff; }
 
-/* Animations */
+/* 按钮动画 */
+.cta-button { display: block; width: 100%; background: #00e676; color: #000; padding: 20px 10px; font-size: 1.3rem; font-weight: 900; border-radius: 5px; text-transform: uppercase; box-shadow: 0 5px 20px rgba(0,230,118,0.4); }
+
 @keyframes spin { 100% { transform: rotate(360deg); } }
-@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
-@keyframes flashBg { 0% { background-color: #d32f2f; } 100% { background-color: #9a0007; } }
-.pulse { animation: pulseAnim 1.5s infinite; }
-@keyframes pulseAnim { 0% { transform: scale(1); } 50% { transform: scale(1.03); } 100% { transform: scale(1); } }
+@keyframes flashBg { 0% { background-color: #d32f2f; } 100% { background-color: #ff5252; } }
+.pulse { animation: pulseAnim 1.2s infinite; }
+@keyframes pulseAnim { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }

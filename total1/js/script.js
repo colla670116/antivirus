@@ -5,28 +5,33 @@ document.addEventListener("DOMContentLoaded", function() {
     const scanningPhase = document.getElementById("scanning-phase");
     const resultPhase = document.getElementById("result-phase");
 
-    // 假装扫描的逻辑，耗时约 3.5 秒
+    // 控制扫描速度：每 50 毫秒跳动一次，整体扫描过程大约耗时 1.5 - 2 秒
     const scanInterval = setInterval(() => {
-        percent += Math.floor(Math.random() * 4) + 1; // 随机增加 1-4
-        if (percent >= 100) percent = 100;
+        // 每次增加 2% 到 5% 的随机进度，让进度条跑得有快有慢，更像真实扫描
+        percent += Math.floor(Math.random() * 4) + 2; 
         
+        if (percent >= 100) percent = 100;
         percentageText.innerText = percent + "%";
 
-        // 根据进度改变文本，制造真实感
-        if (percent > 30 && percent < 70) {
-            scanText.innerText = "Checking for Malware...";
-        } else if (percent >= 70 && percent < 99) {
-            scanText.innerText = "Analyzing Network Vulnerabilities...";
+        // 阶段性切换文案，确保用户能看清每一句话，拉满紧张感
+        if (percent > 25 && percent <= 60) {
+            scanText.innerText = "Checking Vulnerabilities...";
+        } else if (percent > 60 && percent <= 90) {
+            scanText.innerText = "Analyzing Network Security...";
+        } else if (percent > 90) {
+            scanText.innerText = "Finalizing Report...";
         }
 
+        // 当进度达到 100% 时执行动作
         if (percent === 100) {
             clearInterval(scanInterval);
+            
+            // 重点细节：进度条满后，刻意停顿 400 毫秒再弹红框。
+            // 这能模拟真实系统运算完毕后的“卡顿感”，大幅提升可信度。
             setTimeout(() => {
-                // 隐藏扫描界面，显示结果界面
                 scanningPhase.style.display = "none";
                 resultPhase.style.display = "block";
-                // 可选：在这里播放一个短促的警告音效
-            }, 300);
+            }, 400);
         }
-    }, 120); // 数字跳动间隔
+    }, 50); 
 });
